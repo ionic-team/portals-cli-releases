@@ -10,7 +10,7 @@ class Portals < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.0.1/portals_Darwin_arm64.tar.gz"
-      sha256 "d704e6082618266fe9c325158e551dd29df36fa4b68da155630355f99669a279"
+      sha256 "65c3d6cb499abb78f813e4e6260e05507566b06eec70bc39a8f8e499c8671308"
 
       def install
         bin.install "portals"
@@ -18,7 +18,7 @@ class Portals < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.0.1/portals_Darwin_x86_64.tar.gz"
-      sha256 "f6aee51bbf557e3e0c163c7807d36e0479e3e67b190d713117f4f57954a4c993"
+      sha256 "3596a9b3841b934f149b633d1b0cf8dac16f4f874933170e7e7f563c78f54b55"
 
       def install
         bin.install "portals"
@@ -29,7 +29,7 @@ class Portals < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.0.1/portals_Linux_arm64.tar.gz"
-      sha256 "8a780088ad8b06511af4a0d23d59f34bb1056c12f7b603286d99ab7355e0ea43"
+      sha256 "cf3f92434fc38fc317f30bcdaa1285efe31790cf0b395dbfcfaff0e32d8c1ddc"
 
       def install
         bin.install "portals"
@@ -37,7 +37,7 @@ class Portals < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.0.1/portals_Linux_x86_64.tar.gz"
-      sha256 "637528ca7b5c1cd45bb7fe38254302dd002da377c6b163e1ee756553a02c01c5"
+      sha256 "c09a92cb13352550c2557b1f1b0355076a50050e404e5a77d99ee15249165f0c"
 
       def install
         bin.install "portals"
