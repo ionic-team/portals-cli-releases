@@ -5,20 +5,20 @@
 class Portals < Formula
   desc ""
   homepage "https://ionic.io/portals"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.0/portals_Darwin_x86_64.tar.gz"
-      sha256 "979c42e6762eece532012a3b932daf3d262dfc93347263a1918a7b836199d200"
+      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.1/portals_Darwin_x86_64.tar.gz"
+      sha256 "7439621d0a83bfbdf48b4690be9b8bc11acae61be248a956f806717f21bd6f7a"
 
       def install
         bin.install "portals"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.0/portals_Darwin_arm64.tar.gz"
-      sha256 "fd5574bc9f8dbc207180503ddce57e37696921c7dba1fad33d4b6e5af92a74a1"
+      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.1/portals_Darwin_arm64.tar.gz"
+      sha256 "4c0a6ae87bf5c4455f95ffa7ae1bcaff860c01bb19c4dd27651133b7f5a6b671"
 
       def install
         bin.install "portals"
@@ -28,16 +28,16 @@ class Portals < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.0/portals_Linux_x86_64.tar.gz"
-      sha256 "b4c7442196afc7d9422165796233ea0e8ae4c560ade41ba4ed5cfb8efc77010b"
+      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.1/portals_Linux_x86_64.tar.gz"
+      sha256 "04e995dce2ec8ea8c1d4b70dfd820b5bc3091a56d062a7e558b1e4f5990bf7c9"
 
       def install
         bin.install "portals"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.0/portals_Linux_arm64.tar.gz"
-      sha256 "7f6994fcbe8d521ce36813519aa556eeec03ea9cdbf2832ae627a0814cd35487"
+      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.1/portals_Linux_arm64.tar.gz"
+      sha256 "6e9687479f35233fc49e55ffb37153b545ae255784784dc89a6e084f3220186f"
 
       def install
         bin.install "portals"
