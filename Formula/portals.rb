@@ -5,20 +5,20 @@
 class Portals < Formula
   desc ""
   homepage "https://ionic.io/portals"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.1/portals_Darwin_x86_64.tar.gz"
-      sha256 "7439621d0a83bfbdf48b4690be9b8bc11acae61be248a956f806717f21bd6f7a"
+    on_intel do
+      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.2/portals_Darwin_x86_64.tar.gz"
+      sha256 "a49e40cd033f5cb5b83a608376e32b3852ba2c37ddbb824b32d0acc0575c2086"
 
       def install
         bin.install "portals"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.1/portals_Darwin_arm64.tar.gz"
-      sha256 "4c0a6ae87bf5c4455f95ffa7ae1bcaff860c01bb19c4dd27651133b7f5a6b671"
+    on_arm do
+      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.2/portals_Darwin_arm64.tar.gz"
+      sha256 "ffcf1c408a9c91f904864268ad45052c767d06bac281950e49e1b2dd46ef7287"
 
       def install
         bin.install "portals"
@@ -27,20 +27,24 @@ class Portals < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.1/portals_Linux_x86_64.tar.gz"
-      sha256 "04e995dce2ec8ea8c1d4b70dfd820b5bc3091a56d062a7e558b1e4f5990bf7c9"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.2/portals_Linux_x86_64.tar.gz"
+        sha256 "655925ef1e1274d6417f9d135b2f319a1ef3fcb9bff8c7c4dc639f6a21085ba1"
 
-      def install
-        bin.install "portals"
+        def install
+          bin.install "portals"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.1/portals_Linux_arm64.tar.gz"
-      sha256 "6e9687479f35233fc49e55ffb37153b545ae255784784dc89a6e084f3220186f"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.2/portals_Linux_arm64.tar.gz"
+        sha256 "b0023023871d282c3982977e1e526a15aaab7cd4b29d53f7980e8dd3ebe301f6"
 
-      def install
-        bin.install "portals"
+        def install
+          bin.install "portals"
+        end
       end
     end
   end
