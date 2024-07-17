@@ -5,20 +5,20 @@
 class Portals < Formula
   desc ""
   homepage "https://ionic.io/portals"
-  version "0.3.2"
+  version "0.3.3"
 
   on_macos do
     on_intel do
-      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.2/portals_Darwin_x86_64.tar.gz"
-      sha256 "a49e40cd033f5cb5b83a608376e32b3852ba2c37ddbb824b32d0acc0575c2086"
+      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.3/portals_Darwin_x86_64.tar.gz"
+      sha256 "e6a4fa6d326ec111e8b48298840ca9957c4e5d43b9da8a755e340d22b29354a5"
 
       def install
         bin.install "portals"
       end
     end
     on_arm do
-      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.2/portals_Darwin_arm64.tar.gz"
-      sha256 "ffcf1c408a9c91f904864268ad45052c767d06bac281950e49e1b2dd46ef7287"
+      url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.3/portals_Darwin_arm64.tar.gz"
+      sha256 "1453191b39b1ef1e284f83639104abe9e1829a5a82c960052a9a7e8228ccecd8"
 
       def install
         bin.install "portals"
@@ -29,8 +29,8 @@ class Portals < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.2/portals_Linux_x86_64.tar.gz"
-        sha256 "655925ef1e1274d6417f9d135b2f319a1ef3fcb9bff8c7c4dc639f6a21085ba1"
+        url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.3/portals_Linux_x86_64.tar.gz"
+        sha256 "9a2b3acb9dcc6d2fc4268143ac6b8fa082a88a800c394d8613f66509617d0392"
 
         def install
           bin.install "portals"
@@ -39,8 +39,8 @@ class Portals < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.2/portals_Linux_arm64.tar.gz"
-        sha256 "b0023023871d282c3982977e1e526a15aaab7cd4b29d53f7980e8dd3ebe301f6"
+        url "https://github.com/ionic-team/portals-cli-releases/releases/download/0.3.3/portals_Linux_arm64.tar.gz"
+        sha256 "dee94417c85d71e01e25cc2c47e2a052ed5113e41ad41bc9fa981e6ce029c5a5"
 
         def install
           bin.install "portals"
